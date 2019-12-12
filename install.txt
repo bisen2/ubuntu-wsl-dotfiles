@@ -1,0 +1,4 @@
+neofetch
+trash-cli
+bat
+powerline
