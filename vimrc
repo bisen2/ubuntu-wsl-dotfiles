@@ -77,8 +77,8 @@ set number relativenumber
 set nu rnu
 
 " autostart nerdtree if no file specified
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " use system clipboard
 set clipboard=unnamedplus
@@ -95,11 +95,11 @@ set linebreak
 set whichwrap=b,s,<,>,[,]
 
 " add latex suite
-filetype plugin indent on
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor = "latex"
-let g:Tex_FormatDependency_pdf = 'pdf'
-let g:Tex_CompileRule_pdf = 'pdflatex - interaction nonstopmode $*'
+"filetype plugin indent on
+"set grepprg=grep\ -nH\ $*
+"let g:tex_flavor = "latex"
+"let g:Tex_FormatDependency_pdf = 'pdf'
+"let g:Tex_CompileRule_pdf = 'pdflatex - interaction nonstopmode $*'
 
 " enable table mode by default
 " set g:TableModeEnable
@@ -121,20 +121,20 @@ set rtp+=/usr/lib/python3.7/site-packages/powerline/bindings/vim
 "map <ScrollWheelDown> u
 
 " for use as system-wide pager
-let $PAGER=''
+"let $PAGER=''
 
 " add fzf integrations
 
 " Mapping selecting mappings
-nmap <leader><tab> <plug>(fzf-maps-n)
-xmap <leader><tab> <plug>(fzf-maps-x)
-omap <leader><tab> <plug>(fzf-maps-o)
+"nmap <leader><tab> <plug>(fzf-maps-n)
+"xmap <leader><tab> <plug>(fzf-maps-x)
+"omap <leader><tab> <plug>(fzf-maps-o)
 
 " Insert mode completion
-imap <c-x><c-k> <plug>(fzf-complete-word)
-imap <c-x><c-f> <plug>(fzf-complete-path)
-imap <c-x><c-j> <plug>(fzf-complete-file-ag)
-imap <c-x><c-l> <plug>(fzf-complete-line)
+"imap <c-x><c-k> <plug>(fzf-complete-word)
+"imap <c-x><c-f> <plug>(fzf-complete-path)
+"imap <c-x><c-j> <plug>(fzf-complete-file-ag)
+"imap <c-x><c-l> <plug>(fzf-complete-line)
 
 " Advanced customization using autoload functions
-inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})
+"inoremap <expr> <c-x><c-k> fzf#vim#complete#word({'left': '15%'})

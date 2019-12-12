@@ -42,8 +42,8 @@ alias chown='chown -v'
 alias dd='dd status=progress'
 alias rm='trash-put'
 alias sudo='sudo -E ' # run sudo with user env and aliases
-alias cat='bat'
-alias less='bat'
+#alias cat='bat'
+#alias less='bat'
 alias cd..='cd ..'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
