@@ -11,18 +11,18 @@ endif
 " Get the defaults that most users want.
 source $VIMRUNTIME/defaults.vim
 
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-else
-  set backup		" keep a backup file (restore to previous version)
-  set backupdir=~/.vim/backups
-  if has('persistent_undo')
-    set undofile	" keep an undo file (undo changes after closing)
-  endif
-endif
+"if has("vms")
+"  set nobackup		" do not keep a backup file, use versions instead
+"else
+"  set backup		" keep a backup file (restore to previous version)
+"  set backupdir=~/.vim/backups
+"  if has('persistent_undo')
+"    set undofile	" keep an undo file (undo changes after closing)
+"  endif
+"endif
 
 " set swap directory
-set directory=~/.vim/tmp
+"set directory=~/.vim/tmp
 
 if &t_Co > 2 || has("gui_running")
   " Switch on highlighting the last used search pattern.
@@ -70,7 +70,7 @@ set tabstop=4
 set shiftwidth=4
 
 " use spellcheck
-set spell
+" set spell
 
 " use hybrid line numbers
 set number relativenumber
@@ -89,7 +89,7 @@ map <S-P> :r!xclip -o<CR>
 syntax on
 
 " automatic line breaking
-set linebreak
+" set linebreak
 
 " let cursor go from beginning of one line to end of previous
 set whichwrap=b,s,<,>,[,]
@@ -108,9 +108,6 @@ set whichwrap=b,s,<,>,[,]
 inoremap <C-H> <C-W>
 
 " add powerline support
-let g:powerline_pycmd="py3"
-set laststatus=2
-set rtp+=/usr/lib/python3.7/site-packages/powerline/bindings/vim
 
 " enable table mode by default
 " TableModeEnable

@@ -40,18 +40,26 @@ alias cp='cp -iv'
 alias chmod='chmod -v'
 alias chown='chown -v'
 alias dd='dd status=progress'
-alias rm='trash-put'
+#alias rm='trash-put'
 alias sudo='sudo -E ' # run sudo with user env and aliases
 #alias cat='bat'
 #alias less='bat'
 alias cd..='cd ..'
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+VSPRO='/mnt/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/Professional/Common7/IDE/devenv.exe'
+VSCOM='/mnt/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio/2019/Community/Common7/IDE/devenv.exe'
+if [ -f "$VSPRO" ]; then
+	alias vs.exe='$VSPRO'
+elif [ -f "$VSCOM" ]; then
+	alias vs.exe='$VSCOM'
+fi
+
 if [ "$TERM" != "linux" ] && [ "x${SSH_TTY}" = "x" ]; then
 	powerline-daemon -q
 	POWERLINE_BASH_CONTINUATION=1
 	POWERLINE_BASH_SELECT=1
 	# . /usr/share/powerline/bindings/bash/powerline.sh
-	source /usr/lib/python3.7/site-packages/powerline/bindings/bash/powerline.sh
+	source /usr/share/powerline/bindings/bash/powerline.sh
 fi
 
