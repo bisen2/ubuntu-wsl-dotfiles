@@ -36,8 +36,8 @@ if has("autocmd")
   augroup vimrcEx
   au!
 
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
+  " For all text files set 'textwidth' to 512 characters.
+  autocmd FileType text setlocal textwidth=512
 
   augroup END
 
@@ -88,8 +88,8 @@ map <S-P> :r!xclip -o<CR>
 " syntax highlighting
 syntax on
 
-" automatic line breaking
-" set linebreak
+" disable automatic line breaking
+" set nolinebreak
 
 " let cursor go from beginning of one line to end of previous
 set whichwrap=b,s,<,>,[,]

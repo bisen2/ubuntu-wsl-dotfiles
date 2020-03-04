@@ -57,6 +57,8 @@ if [ -f "$VSPRO" ]; then
 elif [ -f "$VSCOM" ]; then
 	alias vs.exe='$VSCOM'
 fi
+alias devenv="/mnt/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio\ 10.0/Common7/IDE/devenv.exe"
+alias mstest="/mnt/c/Program\ Files\ \(x86\)/Microsoft\ Visual\ Studio\ 10.0/Common7/IDE/MSTest.exe"
 
 #if [ "$TERM" != "linux" ] && [ "x${SSH_TTY}" = "x" ]; then
 	#powerline-daemon -q
